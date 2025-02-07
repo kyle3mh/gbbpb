@@ -1,0 +1,40 @@
+[
+    {
+        "Name": "Nikolay Storonsky",
+        "No People": 1,
+        "Ranking": 1,
+        "Company": "Revolut",
+        "Valuation": 35.6,
+        "Website": "https://www.revolut.com/",
+        "Industry": "Fintech",
+        "Revenues": null,
+        "Profits (loss)": 435000000.0,
+        "Founded": 2015,
+        "HQ": "London, UK",
+        "Job Title": "CEO",
+        "Gender": "M",
+        "Age when founded business": 31,
+        "Education level - uni and where?": "Masters degree",
+        "Profession": "Trader",
+        "LinkedIn": "https://www.linkedin.com/in/nstoronsky/?originalSubdomain=uk"
+    },
+    {
+        "Name": "Sir Jim Ratcliffe",
+        "No People": 1,
+        "Ranking": 2,
+        "Company": "Ineos",
+        "Valuation": 29.0,
+        "Website": "https://www.ineos.com/",
+        "Industry": "Chemicals",
+        "Revenues": null,
+        "Profits (loss)": 339600000.0,
+        "Founded": 1998,
+        "HQ": "London, UK",
+        "Job Title": "Chairman",
+        "Gender": "M",
+        "Age when founded business": 46,
+        "Education level - uni and where?": "University of Birmingham, Bachelors degree in chemical engineering",
+        "Profession": "Chemical Engineer",
+        "LinkedIn": "https://www.linkedin.com/company/ineos/"
+    }
+]
