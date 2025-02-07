@@ -1,28 +1,61 @@
-import Card from "./card";
+// import Card from "./Card";
+
+// interface Person {
+//   id: number;
+//   name: string;
+//   company: string;
+//   netWorth: string;
+//   rank: number;
+//   year: number;
+//   industry: string;
+//   revenue: number;
+//   profits: number;
+//   hq: string;
+//   image: string;
+//   expandedText: string;
+// }
+
+// const GridView = ({ people }: { people: Person[] }) => {
+//   return (
+//     <div className="w-full grid grid-cols-1 gap-12 mt-12">
+//       {people.map((person) => (
+//         <Card key={person.id} {...person}  />
+//       ))}
+//     </div>
+//   );
+// };
+
+// export default GridView;
+
+
+import Card from "./Card";
 
 interface Person {
   id: number;
   name: string;
   company: string;
-  netWorth: string;
-  rank: number;
-  year: number;
+  valuation: number;
+  ranking: number;
+  founded: number;
   industry: string;
-  revenue: number;
+  revenues: number;
   profits: number;
   hq: string;
-  image: string;
-  expandedText: string;
+  jobTitle: string;
+  website: string;
+  linkedin: string;
+  shortBio: string;
 }
 
-const GridView = ({ people }: { people: Person[] }) => {
+const GridView: React.FC<{ people: Person[]; sortBy: string }> = ({ people, sortBy }) => {
   return (
     <div className="w-full grid grid-cols-1 gap-12 mt-12">
       {people.map((person) => (
-        <Card key={person.id} {...person}  />
+        <Card key={person.id} {...person} sortBy={sortBy} />
       ))}
     </div>
   );
 };
+
 
 export default GridView;
