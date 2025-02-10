@@ -10,15 +10,18 @@ interface ProfileProps {
   linkedIn: string;
   companyName: string;
   industry: string;
-  revenue: string;
+  revenues: string;
   profits: string;
   yearFounded: number;
+  ageWhenFoundedBusiness: number;
   hq: string;
   foundingLocation: string;
+  website: string;
+  ambassador: string;
 }
 
 const Profile: React.FC<ProfileProps> = ({
-  name,
+  //name,
   gender,
   education,
   profession,
@@ -27,7 +30,7 @@ const Profile: React.FC<ProfileProps> = ({
   linkedIn,
   companyName,
   industry,
-  revenue,
+  revenues,
   profits,
   yearFounded,
   hq,
@@ -110,7 +113,7 @@ const Profile: React.FC<ProfileProps> = ({
             </div>
             <div className="flex flex-col">
               <p className="text-neutral-900 text-sm font-bold">Revenue</p>
-              <p className="text-neutral-900 text-xs font-medium">{revenue}</p>
+              <p className="text-neutral-900 text-xs font-medium">{revenues}</p>
             </div>
             <div className="flex flex-col">
               <p className="text-neutral-900 text-sm font-bold">Profits</p>

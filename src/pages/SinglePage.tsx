@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import SinglePageHeader from "../components/SinglePageHeader";
+//import SinglePageHeader from "../components/SinglePageHeader";
 import Hero from "../components/Hero";
 import Profile from "../components/Profile";
 import MembershipCta from "../components/MembershipCta";
 import ProfileTwoPeople from "../components/ProfileTwoPeople";
+import { slugify } from "../utils/helpers";
 
 // Define the interface for your data items
 interface Item {
@@ -28,6 +29,8 @@ interface Item {
   ageWhenFoundedBusiness2: number;
   educationLevelUni: string;
   educationLevelUni2: string;
+  employment: string;
+  employment2: string;
   profession: string;
   profession2: string;
   linkedIn: string;
@@ -36,15 +39,10 @@ interface Item {
   ambassador: string;
   expandedText: string;
   image: string;
+  maritalStatus: string;
+  maritalStatus2: string;
+  foundingLocation: string;
 }
-
-// Helper function to create a URL-friendly slug from a string
-const slugify = (str: string): string =>
-  str
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, "-") // Replace spaces with -
-    .replace(/[^a-z0-9-]/g, ""); // Remove all non-alphanumeric characters except -
 
 const SinglePage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -109,16 +107,19 @@ const SinglePage = () => {
             employment2={item.jobTitle2}
             ageWhenFoundedBusiness={item.ageWhenFoundedBusiness}
             ageWhenFoundedBusiness2={item.ageWhenFoundedBusiness2}
-            socialMedia={item.linkedIn}
-            socialMedia2={item.linkedIn2}
+            linkedIn={item.linkedIn}
+            linkedIn2={item.linkedIn2}
             companyName={item.company}
             industry={item.industry}
-            revenue={item.revenues}
+            revenues={item.revenues}
             profits={item.profitsLoss}
             yearFounded={item.founded}
             hq={item.hq}
             website={item.website}
             ambassador={item.ambassador}
+            maritalStatus={item.maritalStatus}
+            maritalStatus2={item.maritalStatus2}
+            foundingLocation={item.foundingLocation}
           />
         ) : (
           <Profile
@@ -128,15 +129,17 @@ const SinglePage = () => {
             profession={item.profession}
             employment={item.jobTitle}
             ageWhenFoundedBusiness={item.ageWhenFoundedBusiness}
-            socialMedia={item.linkedIn}
+            linkedIn={item.linkedIn}
             companyName={item.company}
             industry={item.industry}
-            revenue={item.revenues}
+            revenues={item.revenues}
             profits={item.profitsLoss}
             yearFounded={item.founded}
+            maritalStatus={item.maritalStatus}
             hq={item.hq}
             website={item.website}
             ambassador={item.ambassador}
+            foundingLocation={item.foundingLocation}
           />
         )}
 
@@ -195,8 +198,8 @@ const SinglePage = () => {
 
         {/* Back to Home */}
         <Link to="/" className="mt-4 inline-block text-blue-500">
-        Back to Home
-      </Link>
+          Back to Home
+        </Link>
       </div>
     </React.Fragment>
   );

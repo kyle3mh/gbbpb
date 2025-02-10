@@ -3,7 +3,8 @@ import Home from "./pages/Home";
 import SinglePage from "./pages/SinglePage";
 
 const App = () => (
-  <Router basename="/gbbpb-test">
+  <Router basename="/gbbpb/">
+  
     <Routes>
       <Route index element={<Home />} />
       {/* 

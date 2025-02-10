@@ -2,7 +2,7 @@ import React from "react";
 
 interface ProfileProps {
   name: string;
-  name2: string
+  name2: string;
   gender: string;
   gender2: string;
   education: string;
@@ -13,15 +13,19 @@ interface ProfileProps {
   employment2: string;
   maritalStatus: string;
   maritalStatus2: string;
+  ageWhenFoundedBusiness: number;
+  ageWhenFoundedBusiness2: number;
   linkedIn: string;
   linkedIn2: string;
   companyName: string;
   industry: string;
-  revenue: string;
+  revenues: string;
   profits: string;
   yearFounded: number;
   hq: string;
   foundingLocation: string;
+  website: string;
+  ambassador: string;
 }
 
 const ProfileTwoPeople: React.FC<ProfileProps> = ({
@@ -41,7 +45,7 @@ const ProfileTwoPeople: React.FC<ProfileProps> = ({
   linkedIn2,
   companyName,
   industry,
-  revenue,
+  revenues,
   profits,
   yearFounded,
   hq,
@@ -71,7 +75,7 @@ const ProfileTwoPeople: React.FC<ProfileProps> = ({
             </div>
             <div className="flex flex-col">
               <p className="text-neutral-900 text-sm font-bold">Revenue</p>
-              <p className="text-neutral-900 text-xs font-medium">{revenue}</p>
+              <p className="text-neutral-900 text-xs font-medium">{revenues}</p>
             </div>
             <div className="flex flex-col">
               <p className="text-neutral-900 text-sm font-bold">Profits</p>
